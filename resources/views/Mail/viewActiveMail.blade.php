@@ -121,14 +121,11 @@
                                                                                 <tr>
                                                                                     <td class="esd-block-text es-m-txt-c es-p15t"
                                                                                         align="center">
-                                                                                        <p>We have received your account
-                                                                                            registration request. If
-                                                                                            this is correct, please
-                                                                                            confirm by entering the code
-                                                                                            below to confirm the
-                                                                                            account. This is an
-                                                                                            automated email, please do
-                                                                                            not reply to this email</p>
+                                                                                        <p>Chúng tôi đã nhận được tài khoản của bạn
+                                                                                            yêu cầu đăng ký. Nếu
+                                                                                            Điều này là chính xác, xin vui lòng
+                                                                                            Xác nhận bằng cách nhập mã
+                                                                                            Dưới đây để xác nhận</p>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
@@ -192,8 +189,8 @@
                                                                                     <td class="esd-block-text es-p5b"
                                                                                         align="center">
                                                                                         <h3 style="line-height: 150%;">
-                                                                                            The above code will expire
-                                                                                            if it exceeds 1 minute</h3>
+                                                                                        The above code will expire
+                                                                                        if it exceeds 1 minute</h3>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>

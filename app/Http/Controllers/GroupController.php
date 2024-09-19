@@ -210,7 +210,11 @@ class GroupController extends Controller
                     ->groupBy('my_id')
                     ->get();
 
-                $info_members[$key]->follower = $follower[0]->count;
+                    if ($follower->isNotEmpty()) {
+                        $info_members[$key]->follower = $follower[0]->count;
+                    } else {
+                        $info_members[$key]->follower = 0; // Hoặc giá trị mặc định khác nếu không có follower
+                    }
             }
             $info_members[$key]->friends = $friends;
         }

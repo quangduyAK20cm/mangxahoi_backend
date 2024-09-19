@@ -26,12 +26,12 @@ class AccountController extends Controller
             Mail::to($request->email)->send(new ActiveMail($dataMail));
             return response()->json([
                 'status'    => 1,
-                'message'   => 'Sent mail successfully',
+                'message'   => 'Email đã gửi thành công',
             ]);
         } else {
             return response()->json([
                 'status'    => 0,
-                'message'   => 'Email does not exist',
+                'message'   => 'Email không tồn tại',
             ]);
         }
     }
@@ -62,18 +62,18 @@ class AccountController extends Controller
                 }
                 return response()->json([
                     'status'  => 1,
-                    'message' => "Your account has been successfully activated",
+                    'message' => "Tài khoản của bạn đã được kích hoạt thành công",
                 ]);
             } else {
                 return response()->json([
                     'status'  => 0,
-                    'message' => "Account is already activated",
+                    'message' => "Tài khoản đã được kích hoạt",
                 ]);
             }
         } else {
             return response()->json([
                 'status'  => 0,
-                'message' => "Invalid confirmation code. Please try again",
+                'message' => "Mã xác nhận không hợp lệ. Vui lòng thử lại",
             ]);
         }
     }
@@ -106,7 +106,7 @@ class AccountController extends Controller
         if ($user) {
             return response()->json([
                 'status'    => 1,
-                'message'    => "Your account has been successfully created!",
+                'message'    => "Tài khoản của bạn đã được tạo thành công!",
             ]);
         } else {
             return response()->json([
@@ -125,7 +125,7 @@ class AccountController extends Controller
             if ($user->status == Client::banned_account) {
                 return response()->json([
                     'status'    => -2,
-                    'message'   => 'Your account has been banned',
+                    'message'   => 'Tài khoản của bạn đã bị cấm',
                 ]);
             } else {
                 if ($user->is_active == 1) {
@@ -161,14 +161,14 @@ class AccountController extends Controller
                     return response()->json([
                         'status' => -1,
                         'email' => $user->email,
-                        'message' => 'Your account has not been activated',
+                        'message' => 'Tài khoản của bạn chưa được kích hoạt',
                     ]);
                 }
             }
         } else {
             return response()->json([
                 'status' => 0,
-                'message' => 'Invalid login information',
+                'message' => 'Thông tin đăng nhập không hợp lệ',
             ]);
         }
     }
